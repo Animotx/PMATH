@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Cazie Auto Login Helper",
+  "version": "1.0.0",
+  "description": "Clicks the Cazie login form after browser autofill has supplied both credentials.",
+  "host_permissions": [
+    "https://cazie-s.onrender.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cazie-s.onrender.com/*"
+      ],
+      "js": [
+        "cazie-auto-login.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
