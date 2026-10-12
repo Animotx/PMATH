@@ -12,8 +12,8 @@
 
   const CONFIG = Object.freeze({
     pollMs: 250,
-    readyDelayMinMs: 850,
-    readyDelayMaxMs: 1350,
+    readyDelayMinMs: 10000,
+    readyDelayMaxMs: 10000,
     skipDelayMs: 650,
     maxDistance: 0.34,
     minMargin: 0.055,
@@ -413,3 +413,4 @@
   setStatus('Auto-started; watching for a clear problem…');
   tick();
 })();
+
