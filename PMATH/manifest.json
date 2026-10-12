@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "PMath Schedule Controller",
+  "version": "1.0.0",
+  "description": "Clock-aware schedule, navigation and limited recovery for PMath100. Answers remain manual.",
+  "permissions": ["storage", "alarms", "tabs"],
+  "host_permissions": ["https://pmath100.com/*", "https://www.pmath100.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "PMath Schedule Controller", "default_popup": "popup.html" },
+  "content_scripts": [{
+    "matches": ["https://pmath100.com/*", "https://www.pmath100.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

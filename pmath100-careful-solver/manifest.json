@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "PMath100 Careful Auto Solver",
+  "version": "1.2.0",
+  "description": "Recognizes clear PMath100 colored-tile math problems, waits for the page timer, submits high-confidence answers, and skips uncertain images.",
+  "content_scripts": [
+    {
+      "matches": ["https://pmath100.com/games-mathproblem*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

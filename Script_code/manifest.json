@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Cazie Flag Challenge Helper",
+  "version": "1.6.0",
+  "description": "Starts the flag challenge from the dashboard and answers flags after manual sign-in.",
+  "host_permissions": [
+    "https://cazie-s.onrender.com/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Hard refresh this tab"
+  },
+  "commands": {
+    "hard-refresh-current-tab": {
+      "suggested_key": "Ctrl+Shift+Y",
+      "description": "Hard refresh the current tab"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cazie-s.onrender.com/*"
+      ],
+      "js": [
+        "cazie-flag-autoplay.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
