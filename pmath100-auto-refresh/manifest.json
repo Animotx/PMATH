@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "PMath100 Login Auto Refresh",
+  "version": "1.1.0",
+  "description": "Automatically refreshes the PMath100 login page every 10 seconds while it is open.",
+  "content_scripts": [
+    {
+      "matches": ["https://pmath100.com/login"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
